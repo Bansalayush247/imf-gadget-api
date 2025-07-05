@@ -20,5 +20,5 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🔐 IMF API secured and running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
