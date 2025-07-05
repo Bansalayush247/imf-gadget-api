@@ -11,8 +11,10 @@ const swaggerSpec = require('./swagger');
 
 app.use(express.json());
 app.get("/", (req, res) => {
+  console.log("✅ Root route hit");
   res.send("🔐 IMF Gadget API is live 🚀");
 });
+
 
 // Public login route
 app.use("/", authRouter);
