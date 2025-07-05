@@ -21,7 +21,8 @@ app.use("/", authRouter);
 app.use("/gadgets", authMiddleware, gadgetsRouter);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3000;  // ✅ always fallback
+
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
